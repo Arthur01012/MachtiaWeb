@@ -1,75 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Machtia - Aprende Náhuatl Interactivamente</title>
-        <link rel="stylesheet" href="styles/index.css">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Quicksand:wght@600&display=swap"
-            rel="stylesheet">
-    </head>
-    <body>
-        <!-- Header/Navegación -->
-        <header>
-            <div class="logo">Machtia</div>
-            <nav>
-                <ul>
-                    <li><a href="#features">Características</a></li>
-                    <li><a href="./pages/Gallery.html">Galería</a></li>
-                    <li><a href="#">Descargar</a></li>
-                    <li><a href="./pages/Contact.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machtia - Aprende Náhuatl Interactivamente</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Quicksand:wght@600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- Header/Navegación -->
+  <header>
+    <div class="logo">Machtia</div>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="#features">Características</a></li>
+        <li><a href="./pages/Gallery.html">Galería</a></li>
+        <li><a href="#">Descargar</a></li>
+        <li><a href="./pages/Contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Sección Hero -->
-        <section class="hero">
-            <h1>Aprende Náhuatl con Machtia</h1>
-            <p>La aplicación interactiva que te permite descubrir y preservar la
-                lengua náhuatl a través de juegos, categorías organizadas y
-                contenido multimedia.</p>
-            <div>
-                <a href="#" class="btn">Descargar Ahora</a>
-                <a href="#" class="btn btn-secondary">Conoce Más</a>
-            </div>
-        </section>
+  <!-- Sección Hero -->
+  <section class="hero">
+    <h1>Aprende Náhuatl con Machtia</h1>
+    <p>
+      La aplicación interactiva que te permite descubrir y preservar la lengua
+      náhuatl a través de juegos, categorías organizadas y contenido
+      multimedia.
+    </p>
+    <div>
+      <a href="#" class="btn">Descargar Ahora</a>
+      <a href="#" class="btn btn-secondary">Conoce Más</a>
+    </div>
+  </section>
 
-        <!-- Sección de Características -->
-        <section class="features" id="features">
-            <h2>Descubre las características de Machtia</h2>
-            <div class="feature-cards">
-                <div class="card">
-                    <img src="./Images/Categorias.png"
-                        alt="Icono categorías">
-                    <h3>Aprendizaje por Categorías</h3>
-                    <p>Organizamos el contenido en 10 categorías fundamentales:
-                        Abecedario, Números, Colores, Animales y más, con audio
-                        incluido.</p>
-                </div>
+  <!-- Sección de Características -->
+  <section class="features" id="features">
+    <h2>Descubre las características de Machtia</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <img src="./Images/Categorias.png" alt="Icono categorías" />
+        <h3>Aprendizaje por Categorías</h3>
+        <p>
+          Organizamos el contenido en 10 categorías fundamentales: Abecedario,
+          Números, Colores, Animales y más, con audio incluido.
+        </p>
+      </div>
 
-                <div class="card">
-                    <img src="./Images/Juegos_Educativos.png" alt="Icono juegos">
-                    <h3>Juegos Educativos</h3>
-                    <p>Memorama, Ahorcado, Sopa de Letras y otros juegos
-                        interactivos que hacen del aprendizaje una experiencia
-                        divertida.</p>
-                </div>
+      <div class="card">
+        <img src="./Images/Juegos_Educativos.png" alt="Icono juegos" />
+        <h3>Juegos Educativos</h3>
+        <p>
+          Memorama, Ahorcado, Sopa de Letras y otros juegos interactivos que
+          hacen del aprendizaje una experiencia divertida.
+        </p>
+      </div>
 
-                <div class="card">
-                    <img src="./Images/Usuarios.png" alt="Icono usuario">
-                    <h3>Perfil Personalizado</h3>
-                    <p>Crea tu cuenta, guarda tu progreso y descarga contenido
-                        para aprender sin conexión a internet.</p>
-                </div>
-            </div>
-        </section>
+      <div class="card">
+        <img src="./Images/Usuarios.png" alt="Icono usuario" />
+        <h3>Perfil Personalizado</h3>
+        <p>
+          Crea tu cuenta, guarda tu progreso y descarga contenido para aprender
+          sin conexión a internet.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2023 Machtia - Todos los derechos reservados</p>
-            <p>Aplicación diseñada para la preservación y enseñanza de la lengua
-                náhuatl .</p>
-        </footer>
-    </body>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Machtia - Todos los derechos reservados</p>
+    <p>
+      Aplicación diseñada para la preservación y enseñanza de la lengua náhuatl
+      .
+    </p>
+  </footer>
+
+  <!-- Script hamburguesa -->
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const navList = document.getElementById("nav-list");
+
+    toggleBtn.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+  </script>
+</body>
 </html>
