@@ -5,11 +5,18 @@
     --color-light: #fff;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     color: var(--color-dark);
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -20,6 +27,8 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 100;
 }
 
 .logo {
@@ -49,8 +58,7 @@ nav a:hover {
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('assets/images/hero-bg.jpg') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero-bg.jpg') no-repeat center/cover;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -155,6 +163,9 @@ footer {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        z-index: 1100;
+        background-color: transparent;
+        position: relative;
     }
 
     nav ul {
@@ -177,22 +188,11 @@ footer {
     nav ul li {
         margin: 0.5rem 0;
     }
-}
 
-
-/* --- ✅ Responsive --- */
-
-@media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0.8rem;
-        width: 100%;
     }
 
     .hero {

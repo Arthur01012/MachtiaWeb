@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Machtia - Aprende Náhuatl Interactivamente</title>
   <link rel="stylesheet" href="./styles/index.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Quicksand:wght@600&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Quicksand:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- Header/Navegación -->
@@ -28,11 +25,7 @@
   <!-- Sección Hero -->
   <section class="hero">
     <h1>Aprende Náhuatl con Machtia</h1>
-    <p>
-      La aplicación interactiva que te permite descubrir y preservar la lengua
-      náhuatl a través de juegos, categorías organizadas y contenido
-      multimedia.
-    </p>
+    <p>La aplicación interactiva que te permite descubrir y preservar la lengua náhuatl a través de juegos, categorías organizadas y contenido multimedia.</p>
     <div>
       <a href="#" class="btn">Descargar Ahora</a>
       <a href="#" class="btn btn-secondary">Conoce Más</a>
@@ -46,28 +39,19 @@
       <div class="card">
         <img src="./Images/Categorias.png" alt="Icono categorías" />
         <h3>Aprendizaje por Categorías</h3>
-        <p>
-          Organizamos el contenido en 10 categorías fundamentales: Abecedario,
-          Números, Colores, Animales y más, con audio incluido.
-        </p>
+        <p>Organizamos el contenido en 10 categorías fundamentales: Abecedario, Números, Colores, Animales y más, con audio incluido.</p>
       </div>
 
       <div class="card">
         <img src="./Images/Juegos_Educativos.png" alt="Icono juegos" />
         <h3>Juegos Educativos</h3>
-        <p>
-          Memorama, Ahorcado, Sopa de Letras y otros juegos interactivos que
-          hacen del aprendizaje una experiencia divertida.
-        </p>
+        <p>Memorama, Ahorcado, Sopa de Letras y otros juegos interactivos que hacen del aprendizaje una experiencia divertida.</p>
       </div>
 
       <div class="card">
         <img src="./Images/Usuarios.png" alt="Icono usuario" />
         <h3>Perfil Personalizado</h3>
-        <p>
-          Crea tu cuenta, guarda tu progreso y descarga contenido para aprender
-          sin conexión a internet.
-        </p>
+        <p>Crea tu cuenta, guarda tu progreso y descarga contenido para aprender sin conexión a internet.</p>
       </div>
     </div>
   </section>
@@ -75,10 +59,7 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2023 Machtia - Todos los derechos reservados</p>
-    <p>
-      Aplicación diseñada para la preservación y enseñanza de la lengua náhuatl
-      .
-    </p>
+    <p>Aplicación diseñada para la preservación y enseñanza de la lengua náhuatl.</p>
   </footer>
 
   <!-- Script hamburguesa -->
@@ -88,6 +69,18 @@
 
     toggleBtn.addEventListener("click", () => {
       navList.classList.toggle("active");
+      toggleBtn.classList.toggle("active");
+      toggleBtn.textContent = toggleBtn.classList.contains("active") ? "✕" : "☰";
+    });
+
+    // Cierra el menú al hacer clic en cualquier enlace
+    const navLinks = navList.querySelectorAll("a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navList.classList.remove("active");
+        toggleBtn.classList.remove("active");
+        toggleBtn.textContent = "☰";
+      });
     });
   </script>
 </body>
